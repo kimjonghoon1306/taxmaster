@@ -146,3 +146,43 @@ html, body { background: var(--bg); color: var(--text); font-family: 'Noto Sans 
   .section-title { font-size: 26px; }
   .section { padding: 32px 16px 60px; }
 }
+
+/* ── 버튼 공통 애니메이션 ── */
+button, .btn-gold, .btn-ghost, .doc-btn, .tab, .quiz-option {
+  transition: all 0.18s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+button:active { transform: scale(0.96) !important; }
+
+.btn-gold:hover { opacity: 0.88; transform: translateY(-1px); box-shadow: 0 4px 20px rgba(201,168,76,0.3); }
+.btn-ghost:hover { border-color: var(--gold-border); color: var(--gold); transform: translateY(-1px); }
+.doc-btn:hover { border-color: var(--gold-border); color: var(--gold); transform: translateY(-1px); background: var(--bg2); }
+.tab:hover:not(.active) { border-color: var(--gold-border); color: var(--gold); transform: translateY(-1px); }
+.tab.active { transform: none; }
+
+/* 퀴즈 옵션 hover */
+.quiz-option:hover { border-color: var(--gold-border); background: var(--card2); transform: translateX(4px); }
+.quiz-option.selected { transform: translateX(4px); }
+
+/* ── 네비 탭 ── */
+.nav-tab-btn {
+  transition: all 0.18s cubic-bezier(0.4,0,0.2,1) !important;
+}
+.nav-tab-btn:hover { background: var(--bg3) !important; color: var(--text) !important; transform: translateY(-1px); }
+.nav-tab-btn:active { transform: scale(0.95) !important; }
+
+/* ── 톱니바퀴 ── */
+.gear-btn {
+  transition: all 0.2s ease !important;
+}
+.gear-btn:hover {
+  color: var(--gold) !important;
+  background: var(--gold-dim) !important;
+  transform: rotate(45deg) scale(1.1) !important;
+}
+.gear-btn:active { transform: rotate(90deg) scale(0.95) !important; }
+
+/* ── 피처 카드 hover 보완 ── */
+.feature-card-inner:hover .feature-start-btn {
+  background: var(--gold) !important;
+  color: var(--bg) !important;
+}
