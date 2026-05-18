@@ -200,8 +200,31 @@ export default function GuideSection({ steps, type }: Props) {
         <div style={{ fontSize: 15, fontWeight: 700, marginBottom: 6 }}>
           모든 단계 완료 = {type === "corp" ? "법인" : "협동조합"} 설립 완료!
         </div>
-        <div style={{ fontSize: 13, color: "var(--text2)", lineHeight: 1.7 }}>
-          궁금한 점은 국세청 126, {type === "coop" ? "기획재정부 협동조합 포털 www.coop.go.kr" : "인터넷등기소 www.iros.go.kr"}에서 확인하세요.
+        <div style={{ fontSize: 13, color: "var(--text2)", lineHeight: 2 }}>
+          궁금한 점은 국세청 ☎126 으로 문의하거나 아래에서 확인하세요.<br />
+          {type === "coop" ? (
+            <>
+              <a href="https://www.coop.go.kr" target="_blank" rel="noopener noreferrer"
+                style={{ color: "var(--blue)", textDecoration: "none", marginRight: 16 }}>
+                ↗ 협동조합 포털 coop.go.kr
+              </a>
+              <a href="https://www.iros.go.kr/index.jsp" target="_blank" rel="noopener noreferrer"
+                style={{ color: "var(--blue)", textDecoration: "none" }}>
+                ↗ 인터넷등기소 iros.go.kr
+              </a>
+            </>
+          ) : (
+            <>
+              <a href="https://www.iros.go.kr/index.jsp" target="_blank" rel="noopener noreferrer"
+                style={{ color: "var(--blue)", textDecoration: "none", marginRight: 16 }}>
+                ↗ 인터넷등기소 iros.go.kr
+              </a>
+              <a href="https://www.hometax.go.kr" target="_blank" rel="noopener noreferrer"
+                style={{ color: "var(--blue)", textDecoration: "none" }}>
+                ↗ 홈택스 hometax.go.kr
+              </a>
+            </>
+          )}
         </div>
       </div>
     </div>
